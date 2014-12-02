@@ -1,4 +1,4 @@
-anuglar_mmm
+angular_mmm
 ===========
 
 [![Build Status](https://travis-ci.org/makakoa/angular_mmm.svg)](https://travis-ci.org/makakoa/angular_mmm)
