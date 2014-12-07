@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('mmm_ctrl', ['$scope', '$http', function($scope, $http) {
+  app.controller('mmmCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.calculate = function() {
       $http({
         method: 'POST',
