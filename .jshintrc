@@ -1,0 +1,9 @@
+{
+  "node": true,
+  "mocha": true,
+  "expr": true,
+  "globals": {
+    "$": false,
+    "angular": false
+  }
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head lang = "en">
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css"/>
+  </head>
+  <body>
+    <div data-ng-app="app">
+      <div data-ng-controller="mmm_ctrl">
+        <div id="prompt">
+          <h1>Mean Median Mode</h1>
+          <h3>Enter series of numbers separated by spaces<h3>
+          <input type="text" data-ng-model="arr.numbers"/></br>
+          <button data-ng-click="calculate()">Calculate</button>
+        </div>
+        <div id="answers">
+          <p>Mean: {{results.mean}}</p>
+          <p>Median: {{results.median}}</p>
+          <p>Mode: {{results.mode}}</p>
+        </div>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
