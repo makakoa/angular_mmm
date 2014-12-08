@@ -25,7 +25,7 @@ describe('MMM controller', function() {
       $httpBackend = _$httpBackend_;
       $controllerConstructor('mmmCtrl', {$scope: $scope});
       $httpBackend.expectPOST('/calculate').respond(200, {'results': {'mean': 3, 'median': 3, 'mode': 3}});
-      $scope.arr.numbers = '1 2 3 3 4 5';
+      $scope.arr = {'numbers': '1 2 3 3 4 5'};
       $scope.calculate();
       $httpBackend.flush();
 
