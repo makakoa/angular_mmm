@@ -24,7 +24,7 @@ describe('MMM controller', function() {
     it('should make a post request', angular.mock.inject(function(_$httpBackend_) {
       $httpBackend = _$httpBackend_;
       $controllerConstructor('mmmCtrl', {$scope: $scope});
-      $httpBackend.expectPOST('/calculate').respond(200, {'mean': 3, 'median': 3, 'mode': 3});
+      $httpBackend.expectPOST('/calculate').respond(200, {mean: 3, median: 3, mode: 3});
       $scope.arr = {numbers: '1 2 3 3 4 5'};
       $scope.calculate();
       $httpBackend.flush();
