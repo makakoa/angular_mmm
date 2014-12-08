@@ -1,38 +1,33 @@
 'use strict';
 
 module.exports = function(app) {
-  var handleErrors = function(data) {
-    console.log(data);
-  };
   app.factory('mmmBackend', [function() {
     return function () {
       this.mean = function() {
-        var nums = arguments;
+        var nums = arguments[0];
 
         var sum = 0;
         for (var i = 0; i < nums.length; i++) {
           sum += nums[i];
         }
-        return sum / nums.length;
+        return (sum / nums.length);
       };
 
       this.median = function() {
-        var nums = arguments;
+        var nums = arguments[0];
 
         nums.sort(function(a, b) {
           return a - b;
         });
-        var median;
         if (nums.length%2 === 0) {
-          median = (nums[nums.length/2 - 1] + nums[nums.length/2])/2;
+          return (nums[nums.length/2 - 1] + nums[nums.length/2])/2;
         } else {
-          median = nums[(nums.length - 1)/2];
+          return nums[(nums.length - 1)/2];
         }
-        return median;
       };
 
       this.mode = function() {
-        var nums = arguments;
+        var nums = arguments[0];
 
         nums.sort(function(a, b) {
           return a-b;

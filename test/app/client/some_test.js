@@ -23,7 +23,7 @@ describe('mmm front test', function() {
   describe('mmm calculation', function() {
     it('should calculate the mean median and mode', function() {
       $controllerConstructor('mmmCtrl', {$scope: $scope});
-      $scope.arr.numbers = '1 2 3 3 4 5';
+      $scope.arr = {'numbers': '1 2 3 3 4 5'};
       $scope.calculate();
       expect($scope.results.mean).toBe(3);
       expect($scope.results.median).toBe(3);
