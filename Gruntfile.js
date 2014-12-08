@@ -26,7 +26,7 @@ module.exports = function(grunt) {
       options: {
         config: '.jscsrc'
       },
-      src: ['server.js', 'test/api/*.js', 'test/app/client/*.j    s', 'app/js/*.js', 'Gruntfile.js']
+      src: ['server.js', 'test/api/*.js', 'test/app/client/*.js', 'app/js/*.js', 'Gruntfile.js']
     },
 
     clean: {

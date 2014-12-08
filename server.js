@@ -1,7 +1,6 @@
 'use strict';
 
 var express = require('express');
-var mmm = require('./lib/mmm.js');
 var bp = require('body-parser');
 var app = express();
 
