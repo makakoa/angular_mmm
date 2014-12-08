@@ -6,7 +6,7 @@ module.exports = function(config) {
 
     frameworks: ['jasmine'],
 
-    files: ['test/app/testbundle.js'],
+    files: ['test/app/test_bundle.js'],
 
     exclude: ['**/*.swp'],
 

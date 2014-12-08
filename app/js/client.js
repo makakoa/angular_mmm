@@ -4,4 +4,8 @@ require('angular/angular');
 
 var app = angular.module('app', []);
 
-require('./controllers/mmm_ctrl')(app);
+//services
+require('./services/mmm_backend_service')(app);
+
+//controllers
+require('./controllers/mmmCtrl')(app);
