@@ -8,6 +8,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-jscs');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-karma');
 
   grunt.initConfig({
     simplemocha: {
@@ -25,7 +26,7 @@ module.exports = function(grunt) {
       options: {
         config: '.jscsrc'
       },
-      src: ['server.js', 'test/api/*.js', 'test/app/client/*.j    s', 'app/js/*.js', 'Gruntfile.js']
+      src: ['server.js', 'test/api/*.js', 'test/app/client/*.js', 'app/js/*.js', 'Gruntfile.js']
     },
 
     clean: {
@@ -67,9 +68,21 @@ module.exports = function(grunt) {
           'build/main.css': 'app/sass/main.sass'
         }
       }
+    },
+
+    karma: {
+      unit: {
+        configFile: 'karma.config.js'
+      },
+      continuous: {
+        configFile: 'karma.config.js',
+        singleRun: true,
+        browsers: ['PhantomJS']
+      }
     }
   });
   grunt.registerTask('test', ['simplemocha', 'jshint', 'jscs']);
+  grunt.registerTask('test:client', ['browserify:test', 'karma:unit']);
   grunt.registerTask('default', ['test']);
   grunt.registerTask('build:dev', ['clean:dev', 'copy:dev', 'browserify:dev', 'sass']);
 };
