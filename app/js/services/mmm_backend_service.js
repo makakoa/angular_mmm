@@ -5,10 +5,10 @@ module.exports = function(app) {
     return function () {
       this.mean = function() {
         var nums = arguments[0];
-
+        
         var sum = 0;
         for (var i = 0; i < nums.length; i++) {
-          sum += nums[i];
+          sum += Number(nums[i]);
         }
         return (sum / nums.length);
       };

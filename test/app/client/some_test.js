@@ -28,8 +28,6 @@ describe('mmm front test', function() {
       expect($scope.results.mean).toBe(3);
       expect($scope.results.median).toBe(3);
       expect($scope.results.mode).toBe(3);
-      $httpBackend.verifyNoOutstandingExpectation();
-      $httpBackend.verifyNoOutstandingRequest();
     });
   });
 });
